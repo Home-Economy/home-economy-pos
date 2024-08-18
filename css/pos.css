@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.cart-section {
+  width: 30%;
+
+  background-color: #282c34;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-section {
+  width: calc(70% - 80px);
+  background-color: #282c34;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #d0d5e0;
+  padding: 8px;
+  text-align: left;
+}
+
+.cart-table th {
+  background-color: #282c34;
+}
+
+.summary {
+  margin-top: auto;
+  background-color: #282c34;
+  padding: 10px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.summary-row:last-child {
+  font-weight: bold;
+  color: #4caf50;
+  border: none;
+}
+.total-payable-row {
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border-top: 2px solid #ddd;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.hold-btn {
+  background-color: #ff9800;
+}
+
+.print-order-btn {
+  background-color: #673ab7;
+}
+
+.payment-btn {
+  background-color: #4caf50;
+  flex-grow: 1;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+}
+
+.print-bill-btn {
+  background-color: #3f51b5;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  background-color: #282c34;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+.product:hover {
+  scale: 1.2;
+  transition: 0.2s;
+}
+
+.product img {
+  width: auto;
+  height: 100px;
+}
+
+.delete {
+  background-color: #282c34;
+  color: #c1cde6;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}

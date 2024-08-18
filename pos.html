@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="js/script.js"></script>
+    <script src="js/font.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/pos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <meta http-equiv="Cache-control" content="public">
+    <title>Home Economy POS</title>
+</head>
+
+<body>
+    <nav class="sidebar-navigation">
+        <ul>
+            <a href="index.html">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <span class="tooltip">Home</span>
+                </li>
+            </a>
+            <a href="pos.html">
+                <li class="active">
+                    <i class="fa fa-barcode"></i>
+                    <span class="tooltip">POS</span>
+                </li>
+            </a>
+            <a href="inventory.html">
+                <li>
+                    <i class="fa fa-box"></i>
+                    <span class="tooltip">Inventory</span>
+                </li>
+            </a>
+            <a href="new.html">
+                <li>
+                    <i class="fa fa-plus"></i>
+                    <span class="tooltip">New Item</span>
+                </li>
+            </a>
+            <a href="admin.html">
+                <li>
+                    <i class="fa fa-user-tie"></i>
+                    <span class="tooltip">Admin</span>
+                </li>
+            </a>
+            <a href="profile.html">
+                <li class="down">
+                    <i class="fa fa-user"></i>
+                    <span class="tooltip">Profile</span>
+                </li>
+            </a>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="cart-section">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Subtotal</th>
+                        <th>🗑️</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <div class="summary">
+                <div class="summary-row">
+                    <span>Sub-total</span>
+                    <span id="total-price">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span id="order-tax">$0.00</span>
+                </div>
+                <div class="summary-row total-payable-row">
+                    <span>Total Payable</span>
+                    <span id="total-payable">$0.00</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick='payment()' class="payment-btn">Check Out</button>
+            </div>
+            <div class="buttons">
+                <button onclick='cancelOrder()' class="cancel-btn">Cancel</button>
+                <button onclick="swal.fire('ask jiayang')" class="print-bill-btn">Help</button>
+            </div>
+        </div>
+        <div class="product-section">
+            <div class="products" id="products">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </div>
+        <script src="js/pos.js"></script>
+    </div>
+</body>
+
+</html>

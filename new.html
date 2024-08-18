@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="js/script.js"></script>
+    <script src="js/font.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <meta http-equiv="Cache-control" content="public">
+    <title>Home Economy POS</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/new.js"></script>
+</head>
+
+<body>
+    <nav class="sidebar-navigation">
+        <ul>
+            <a href="index.html">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <span class="tooltip">Home</span>
+                </li>
+            </a>
+            <a href="pos.html">
+                <li>
+                    <i class="fa fa-barcode"></i>
+                    <span class="tooltip">POS</span>
+                </li>
+            </a>
+            <a href="inventory.html">
+                <li>
+                    <i class="fa fa-box"></i>
+                    <span class="tooltip">Inventory</span>
+                </li>
+            </a>
+            <li class="active">
+                <i class="fa fa-plus"></i>
+                <span class="tooltip">New Item</span>
+            </li>
+            <a href="admin.html">
+                <li>
+                    <i class="fa fa-user-tie"></i>
+                    <span class="tooltip">Admin</span>
+                </li>
+            </a>
+            <a href="profile.html">
+                <li class="down">
+                    <i class="fa fa-user"></i>
+                    <span class="tooltip">Profile</span>
+                </li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="transactionheader">
+            <h1 class="header">New Item</h1>
+            <br><br><br><br><br>
+
+        </div>
+        <center>
+            <input type="text" id="itemname" class='who' placeholder="Item Name" class="input" />
+            <br>
+            <input type="text" id="itemprice" class='who' placeholder="Item Price" class="input" />
+            <br>
+            <input type="text" id="itemquantity" class='who' placeholder="Item Stock" class="input" />
+            <br>
+            <input type="text" id="itemURL" class='who' placeholder="Item Image URL" class="input" />
+            <br> <button class="submit" onclick="newitem()">Submit</button>
+            <br><br><br><br><br><br>
+            <h3>Preview:</h3>
+            <br>
+            <div id="preview">
+                <img src="https://via.placeholder.com/100" id="previewimg" style="max-height: 100px; width: auto;" />
+                <br><br>
+                <h3 id="previewname">Item Name</h3>
+
+        </center>
+    </div>
+</body>
+
+</html>
