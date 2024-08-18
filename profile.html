@@ -57,6 +57,13 @@
             <button class="submit" onclick="logout()">Log Out</button>
 
         </center>
+        <script>
+            function logout() {
+
+                localStorage.removeItem("authenticated");
+                window.location.href = "login.html";
+            }
+        </script>
     </div>
     </div>
 </body>
