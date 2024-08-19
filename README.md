@@ -11,7 +11,7 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/home-economy.git
+    git clone [https://github.com/yourusername/home-economy.git](https://github.com/Home-Economy/home-economy-pos.git)
     ```
 2. Navigate to the project directory:
     ```sh
