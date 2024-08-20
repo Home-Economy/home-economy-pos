@@ -123,7 +123,7 @@ function payment() {
       if (result.isConfirmed) {
         try {
           let balanceCheck = await fetch(
-            `http://192.168.1.191:3000/card/info/balance?number=${cardNumber}`
+            `https://api.local.rednotsus.rocks/card/info/balance?number=${cardNumber}`
           );
           let balanceData = await balanceCheck.json();
 
@@ -140,7 +140,7 @@ function payment() {
           let success = false;
           for (const item of cart) {
             let response = await fetch(
-              `http://192.168.1.191:3000/card/transact/buy?from=${cardNumber}&itemID=${item.id}&amount=${item.quantity}`
+              `https://api.local.rednotsus.rocks/card/transact/buy?from=${cardNumber}&itemID=${item.id}&amount=${item.quantity}`
             );
             let transactionResponse = await response.json();
 
@@ -181,7 +181,9 @@ function payment() {
     });
   }
 }
-window.onload = fetch("http://192.168.1.191:3000/card/transact/storeItems")
+window.onload = fetch(
+  "https://api.local.rednotsus.rocks/card/transact/storeItems"
+)
   .then((response) => response.json())
   .then((products) => {
     loadProducts(products);

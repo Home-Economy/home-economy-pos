@@ -17,7 +17,7 @@ async function login() {
   }
   try {
     let response = await fetch(
-      "http://192.168.1.191:3000/card/admin/adminLogin?username=" +
+      "https://api.local.rednotsus.rocks/card/admin/adminLogin?username=" +
         username.value +
         "&password=" +
         password.value
