@@ -79,7 +79,7 @@ function pay() {
     .then(async (result) => {
       if (result.isConfirmed) {
         let response = await fetch(
-          `http://localhost:3000/card/admin/add?name=${recipient.value}&amount=${toPay}`
+          `http://192.168.1.191:3000/card/admin/add?name=${recipient.value}&amount=${toPay}`
         );
         let data = await response.json();
         if (data.message === "Success") {

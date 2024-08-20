@@ -32,7 +32,7 @@ function displayInventoryItems(items) {
 }
 
 async function loadInventoryItems() {
-  const apiUrl = "http://localhost:3000/card/transact/storeItems";
+  const apiUrl = "http://192.168.1.191:3000/card/transact/storeItems";
   const data = await fetchInventoryData(apiUrl);
 
   if (data && Array.isArray(data)) {
@@ -70,7 +70,7 @@ async function edit(id, type) {
       .then(async (result) => {
         if (result.isConfirmed) {
           let status = await fetch(
-            `http://localhost:3000/card/transact/edit?itemID=${id}&item=${result.value}`
+            `http://192.168.1.191:3000/card/transact/edit?itemID=${id}&item=${result.value}`
           );
           if (status.ok) {
             loadInventoryItems();
@@ -104,7 +104,7 @@ async function edit(id, type) {
       .then(async (result) => {
         if (result.isConfirmed) {
           let status = await fetch(
-            `http://localhost:3000/card/transact/edit?itemID=${id}&stock=${result.value}`
+            `http://192.168.1.191:3000/card/transact/edit?itemID=${id}&stock=${result.value}`
           );
           if (status.ok) {
             loadInventoryItems();
@@ -141,7 +141,7 @@ async function edit(id, type) {
         if (result.isConfirmed) {
           let newPrice = parseFloat(result.value).toFixed(2);
           let status = await fetch(
-            `http://localhost:3000/card/transact/edit?itemID=${id}&price=${newPrice}`
+            `http://192.168.1.191:3000/card/transact/edit?itemID=${id}&price=${newPrice}`
           );
           if (status.ok) {
             loadInventoryItems();
@@ -175,7 +175,7 @@ async function edit(id, type) {
       .then(async (result) => {
         if (result.isConfirmed) {
           let status = await fetch(
-            `http://localhost:3000/card/transact/edit?itemID=${id}&imageURL=${result.value}`
+            `http://192.168.1.191:3000/card/transact/edit?itemID=${id}&imageURL=${result.value}`
           );
           if (status.ok) {
             loadInventoryItems();

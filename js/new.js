@@ -18,7 +18,7 @@ function newitem() {
     });
     return;
   }
-  let url = `http://localhost:3000/card/transact/add?item=${newItemName.value}&stock=${newItemStock.value}&price=${formattedPrice}&imageURL=${newItemImage.value}`;
+  let url = `http://192.168.1.191:3000/card/transact/add?item=${newItemName.value}&stock=${newItemStock.value}&price=${formattedPrice}&imageURL=${newItemImage.value}`;
   fetch(url).then((response) => {
     if (response.ok) {
       swal.fire({

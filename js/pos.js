@@ -123,7 +123,7 @@ function payment() {
       if (result.isConfirmed) {
         try {
           let balanceCheck = await fetch(
-            `http://localhost:3000/card/info/balance?number=${cardNumber}`
+            `http://192.168.1.191:3000/card/info/balance?number=${cardNumber}`
           );
           let balanceData = await balanceCheck.json();
 
@@ -140,7 +140,7 @@ function payment() {
           let success = false;
           for (const item of cart) {
             let response = await fetch(
-              `http://localhost:3000/card/transact/buy?from=${cardNumber}&itemID=${item.id}&amount=${item.quantity}`
+              `http://192.168.1.191:3000/card/transact/buy?from=${cardNumber}&itemID=${item.id}&amount=${item.quantity}`
             );
             let transactionResponse = await response.json();
 
@@ -181,7 +181,7 @@ function payment() {
     });
   }
 }
-window.onload = fetch("http://localhost:3000/card/transact/storeItems")
+window.onload = fetch("http://192.168.1.191:3000/card/transact/storeItems")
   .then((response) => response.json())
   .then((products) => {
     loadProducts(products);
