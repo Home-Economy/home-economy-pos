@@ -114,9 +114,6 @@ function payment() {
         if (!value) {
           return "You need to write something!";
         }
-        if (value.length !== 16) {
-          return "Card number must be 16 digits!";
-        }
       },
     }).then(async (result) => {
       const cardNumber = result.value;
