@@ -18,7 +18,7 @@ function newitem() {
     });
     return;
   }
-  let url = `https://api.local.rednotsus.rocks/card/transact/add?item=${newItemName.value}&stock=${newItemStock.value}&price=${formattedPrice}&imageURL=${newItemImage.value}`;
+  let url = `https://card-api.ch3n.cc/card/transact/add?item=${newItemName.value}&stock=${newItemStock.value}&price=${formattedPrice}&imageURL=${newItemImage.value}`;
   fetch(url).then((response) => {
     if (response.ok) {
       swal.fire({

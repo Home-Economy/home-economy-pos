@@ -120,7 +120,7 @@ function payment() {
       if (result.isConfirmed) {
         try {
           let balanceCheck = await fetch(
-            `https://api.local.rednotsus.rocks/card/info/balance?number=${cardNumber}`
+            `https://card-api.ch3n.cc/card/info/balance?number=${cardNumber}`
           );
           let balanceData = await balanceCheck.json();
 
@@ -137,7 +137,7 @@ function payment() {
           let success = false;
           for (const item of cart) {
             let response = await fetch(
-              `https://api.local.rednotsus.rocks/card/transact/buy?from=${cardNumber}&itemID=${item.id}&amount=${item.quantity}`
+              `https://card-api.ch3n.cc/card/transact/buy?from=${cardNumber}&itemID=${item.id}&amount=${item.quantity}`
             );
             let transactionResponse = await response.json();
 
@@ -178,9 +178,7 @@ function payment() {
     });
   }
 }
-window.onload = fetch(
-  "https://api.local.rednotsus.rocks/card/transact/storeItems"
-)
+window.onload = fetch("https://card-api.ch3n.cc/card/transact/storeItems")
   .then((response) => response.json())
   .then((products) => {
     loadProducts(products);

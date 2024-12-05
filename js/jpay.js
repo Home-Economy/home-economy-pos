@@ -79,7 +79,7 @@ function pay() {
     .then(async (result) => {
       if (result.isConfirmed) {
         let response = await fetch(
-          `https://api.local.rednotsus.rocks/card/admin/add?name=${recipient.value}&amount=${toPay}`
+          `https://card-api.ch3n.cc/card/admin/add?name=${recipient.value}&amount=${toPay}`
         );
         let data = await response.json();
         if (data.message === "Success") {
